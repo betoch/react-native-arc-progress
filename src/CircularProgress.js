@@ -1,13 +1,11 @@
-import React, {Component, PropTypes} from 'react';
-import  { View  } from 'react-native';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import  { View } from 'react-native';
 import { Surface, Shape, Path, Group } from '../../react-native/Libraries/ART/ReactNativeART';
 import MetricsPath from 'art/metrics/path';
 
-
 export default class CircularProgress extends React.Component {
-
   circlePath(cx, cy, r, degree) {
-
     return Path()
       .moveTo(cx, cx)
       .move(-1*Math.sin(degree/360*2*Math.PI)*r, Math.cos(degree/360*2*Math.PI)*r)
